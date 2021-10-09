@@ -7,9 +7,15 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path={"/"} component={CreateForm} />
-        <Route path={"/form/:id"} component={Form} />
-        <Route exact path={"/check"} component={Check} />
+        <Route path="/form/:id">
+          <Form />
+        </Route>
+        <Route path="/check">
+          <Check />
+        </Route>
+        <Route exact path="/">
+          <CreateForm />
+        </Route>
       </Switch>
     </BrowserRouter>
   );
